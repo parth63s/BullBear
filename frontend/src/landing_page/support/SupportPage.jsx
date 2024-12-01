@@ -1,15 +1,12 @@
 import React from 'react';
-import NavBar from '../NavBar';
 import CreateTicket from './CreateTicket';
-import Footer from '../Footer';
+import Hero from './Hero';
 
 function SupportPage() {
     return ( 
         <>
-            <NavBar/>
             <Hero/>
             <CreateTicket/>
-            <Footer/>
         </>
      );
 }
