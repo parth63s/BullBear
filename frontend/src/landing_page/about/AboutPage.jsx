@@ -1,20 +1,18 @@
 import React from 'react';
 import NavBar from '../NavBar';
 import Hero from './Hero';
-import Brojkerage from './Brojkerage';
+import Team from './Team';
 import Footer from '../Footer';
 
-function PricingPage() {
+function AboutPage() {
     return ( 
         <>
             <NavBar/>
             <Hero/>
-            <Brojkerage/>
+            <Team/>
             <Footer/>
         </>
-        
-
      );
 }
 
-export default PricingPage;
+export default AboutPage;
