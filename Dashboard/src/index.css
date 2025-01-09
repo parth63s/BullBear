@@ -653,7 +653,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  position: relative;
+  /* position: relative; */
 }
 
 .search {
@@ -688,7 +688,7 @@ hr {
 
 .item {
   display: flex;
-  align-items: center;
+  align-items: baseline ;
   justify-content: space-between;
   font-weight: 300;
   font-size: 0.8rem;
