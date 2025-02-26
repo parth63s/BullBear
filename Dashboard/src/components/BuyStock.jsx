@@ -5,11 +5,21 @@ import {GeneralContext} from "./GeneralContext";
 
 import "./BuyStock.css";
 
+import axios from "axios";
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
+
   const handleBuyClick = () => {
+    axios.post("http://localhost:8080/newOrder", {
+        name: uid,
+        qty: stockQuantity,
+        price: stockPrice,
+        mode: "Buy",
+    })
+
     GeneralContext.closeBuyWindow();
   };
 
@@ -18,7 +28,7 @@ const BuyActionWindow = ({ uid }) => {
   };
 
   return (
-    <div className="container border" tabIndex="-1" id="buy-window" draggable="true">
+    <div className="container" tabIndex="-1" id="buy-window" draggable="true">
         <div className="buy-title">
             <h6>Buy {uid} NSE X 1 Qty</h6>
             
@@ -34,11 +44,11 @@ const BuyActionWindow = ({ uid }) => {
         <div className="inputs">
             <div className="input-wrapper col-4">
                 <label htmlFor="first" className="form-label">Qty.</label>
-                <input type="number" className='form-control'/>
+                <input type="number" className='form-control' onChange={(e)=>setStockQuantity(e.target.value)} value={stockQuantity}/>
             </div>    
             <div className="input-wrapper col-4">
                 <label htmlFor="first" className="form-label">Price</label>
-                    <input type="number" className='form-control'/>
+                <input type="number" className='form-control'onChange={(e)=>setStockPrice(e.target.value)} />
             </div>    
         </div>
       </div>

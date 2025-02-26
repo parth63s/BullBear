@@ -1,9 +1,6 @@
 import React, {useState}from "react";
 import { watchlist } from "../data/data";
 import WatchListItem from "./WatchListItem";
-import { GeneralContextProvider } from "./GeneralContext";
-
-
 
 const WatchList = () => {
   return (
