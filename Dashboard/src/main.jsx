@@ -12,6 +12,8 @@ import Summary from "./components/Summary";
 import Orders from "./components/Orders";
 import Holdings from "./components/Holdings";
 import Funds from "./components/Funds";
+import BuyStock from "./components/BuyStock";
+import SellStock from "./components/SellStock";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -1,13 +1,14 @@
 import React, {useState}from "react";
 import { watchlist } from "../data/data";
 import WatchListItem from "./WatchListItem";
+import { GeneralContextProvider } from "./GeneralContext";
 
 
 
 const WatchList = () => {
   return (
     <div className="watchlist-container">
-      <div className="search-container sticky-top">
+      <div className="search-container sticky-top" >
         <input
           type="text"
           name="search"
@@ -21,7 +22,7 @@ const WatchList = () => {
       <ul className="list">
         {watchlist.map((stock, index) => {
           return (
-            <WatchListItem stock={stock} key={index}/>
+              <WatchListItem stock={stock} key={index}/>
           )
         })}
       </ul>

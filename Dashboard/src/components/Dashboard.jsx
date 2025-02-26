@@ -10,13 +10,14 @@ import Orders from "./Orders.jsx";
 import Positions from "./Positions.jsx";
 import Summary from "./Summary.jsx";
 import WatchList from "./WatchList.jsx";
+import {GeneralContextProvider} from "./GeneralContext.jsx";
 
 const Dashboard = () => {
   return (
     <div className="dashboard-container">
-      {/* <GeneralContextProvider> */}
+      <GeneralContextProvider>
         <WatchList />
-      {/* </GeneralContextProvider> */}
+      </GeneralContextProvider>
       <div className="content">
           <Routes>
             <Route exact path="/" element={<Summary/>} />
@@ -26,8 +27,6 @@ const Dashboard = () => {
             <Route path="/funds" element={<Funds />} />
             <Route path="/apps" element={<Apps />} />
           </Routes>
-        
-        
       </div>
     </div>
   );

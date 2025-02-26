@@ -20,6 +20,9 @@ code {
   box-sizing: border-box;
 }
 
+.sticky-top {
+  z-index: 9;
+}
 .content {
   flex-basis: 68%;
   height: 100%;
@@ -64,7 +67,8 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 5%;
+  --bs-gutter-x: 0;
+  /* margin-top: 5%; */
 }
 
 .col {
@@ -215,7 +219,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 }
 
 .col {
@@ -261,19 +265,20 @@ code {
 }
 
 .logo {
-  width: 30px;
-  height: 20px;
+  width: 1rem;
+  height: 1rem;
 }
 
 .menus {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin-top: 1.7rem;
+  /* margin-top: 1.7rem; */
 }
 
 .menus ul {
   list-style-type: none;
+  margin-bottom: 0;
 }
 
 .menus li {
@@ -296,7 +301,7 @@ code {
 
 hr {
   border-left: 0.8px solid rgb(243, 242, 242);
-  height: 30px;
+  /* height: 30px; */
 }
 
 .profile {
@@ -320,16 +325,17 @@ hr {
   text-align: center;
   display: flex;
   background: rgb(252, 229, 252);
-  margin-right: 8px;
-  margin-bottom: 1.3rem;
+  margin-right: 0.5rem;  
+  /* margin-bottom: 1.3rem; */
 }
 
 .profile .username {
   display: flex;
   align-items: center;
+  /* margin-bottom: 0; */
   font-size: 0.8rem;
   font-weight: 300;
-  margin-bottom:  0.4rem;
+  margin-top:  0.7rem;
 }
 
 /* sudo selectors */
@@ -451,7 +457,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 5%;
+  /* margin-top: 5%; */
 }
 
 .col {
@@ -653,7 +659,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  /* position: relative; */
+  position: relative;
 }
 
 .search {
@@ -663,7 +669,7 @@ hr {
   padding: 15px 20px;
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgb(241, 241, 241);
+  color: rgb(36, 33, 33);
   border-bottom: 0.8px solid rgb(235, 234, 234);
 }
 
@@ -682,7 +688,7 @@ hr {
 
 .list li {
   border-bottom: 0.8px solid rgb(235, 234, 234);
-  padding: 12px 10px 12px 14px;
+  padding: 0.5rem;
   position: relative;
 }
 
@@ -692,7 +698,8 @@ hr {
   justify-content: space-between;
   font-weight: 300;
   font-size: 0.8rem;
-  position: relative;
+  position: relative; 
+  
 }
 
 .item-info {
@@ -852,3 +859,108 @@ hr {
 
 
 
+
+.buy-title {
+  color: white;
+  background-color: #74a7fa;
+  padding: 1rem;
+}
+
+.buy-info {
+  text-decoration: none;
+  margin-right: 2rem;
+  background-color: #ecedf0;
+}
+
+.buy-second-box,.sell-second-box {
+  border-bottom: 1.5px solid rgb(177, 171, 171);
+}
+
+.buy-last-box,.sell-last-box {
+  border-top: 1.5px solid rgb(177, 171, 171);
+}
+
+.margin {
+  display: flex;
+  align-items: center;
+}
+
+.buy-btn {
+  background-color: #4d4df8;
+  color: white;
+  border: none;
+  border-radius: 0.1rem;
+  padding: 0.5rem;
+  width: 6rem;
+}
+
+.buy-btn:hover {
+  opacity: 0.9;
+}
+
+.cancel-btn {
+  background-color: #b4b0b0d3;
+  border-radius: 0.1rem;
+  border: none;
+  padding: 0.5rem;
+  width: 6rem;
+  margin-left: 0.5rem;
+}
+
+.cancel-btn:hover {
+  opacity: 0.9;
+}
+
+.buy-container {
+  display: flex;
+  position: absolute;
+  /* top: 10%; */
+  z-index: 10;
+  background-color: white;
+  margin-left: 33%;
+  border: 2px solid !important;
+ }
+
+.sell-btn {
+  background-color: #df1d1d;
+  color: white;
+  border: none;
+  border-radius: 0.1rem;
+  padding: 0.5rem;
+  width: 6rem;
+}
+
+.sell-title {
+  color: white;
+  background-color: #fc4141;
+  padding: 1rem;
+}
+
+/* overlap input label */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  border: 1px solid gray;
+  border-radius: 6px;
+  position: relative;
+  /* width: 200px; */
+  margin: 10px;
+  line-height: 4.5ex;
+}
+
+.input-wrapper label {
+  position: absolute;
+  /* top: 0.2ex; */
+  z-index: 1;
+  left: 2em;
+  background-color: white;
+  padding: 0 5px;
+  font-weight: 500;
+}
+
+.offcanvas {
+  border: 1px solid black;
+}
