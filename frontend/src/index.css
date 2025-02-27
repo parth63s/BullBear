@@ -28,3 +28,20 @@
   border: none;
   border-radius: 0.4rem;
 }
+
+.sign {
+  text-decoration: none;
+  color: black;
+}
+
+.menu {
+  color: black;
+  font-size: large;
+  padding: 0.5rem;
+}
+
+.selected {
+  color: rgb(35, 29, 41);
+  font-weight: 600;
+  border-bottom: 3px solid rgb(19, 125, 224);
+}
