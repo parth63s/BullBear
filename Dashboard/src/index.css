@@ -291,7 +291,6 @@ code {
   font-size: 1rem;
   font-weight: 400;
   color: rgb(70, 70, 70);
-  
 }
 
 .menu.selected {
@@ -963,4 +962,9 @@ hr {
 
 .offcanvas {
   border: 1px solid black;
+}
+
+.logout {
+  font-weight: 400;
+  font-size: medium;
 }

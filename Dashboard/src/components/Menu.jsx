@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {Link} from "react-router-dom";
+import axios from "axios";
 
 const Menu = () => {
   const [selectedMenu, setSelectedmenu] = useState(0);
@@ -14,6 +15,13 @@ const Menu = () => {
     setIsProfileDropdownOpen(!index);
   }
 
+  const  handleLogOutClick = async (e)=> {
+      const response = await axios.get("http://localhost:8080/logout");
+
+      setTimeout(() => {
+        window.location.href = "http://localhost:5174";
+      },10);
+  }
   const menuClass = "menu";
   const activeMenuClass = "menu selected";
 
@@ -63,7 +71,9 @@ const Menu = () => {
         <div className="profile" onClick={handleProfileClick}>
           <div className="avatar">BU</div>
           <div className="username">
-            <p>USERID</p>
+          <Link style={{textDecoration: "none", color:"black"}}  onClick={() => handleLogOutClick()}>
+              <p className="logout">LogOut</p>
+            </Link>
           </div>
         </div>
       </div>
