@@ -21,7 +21,7 @@ function ProductsPage() {
             <RightSection
                 imageURL="media/images/console.png" 
                 productName = "Console" 
-                productDesription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations." 
+                productDesription="The central dashboard for your BullBear account. Gain insights into your trades and investments with in-depth reports and visualisations." 
                 LearnMore="" 
             />
 
@@ -52,7 +52,7 @@ function ProductsPage() {
                 appStore=""
             />
 
-            <p className='text-center mt-2 mb-5'>Want to know more about our technology stack? Check out the Zerodha.tech
+            <p className='text-center mt-2 mb-5'>Want to know more about our technology stack? Check out the BullBear.tech
             blog.</p>   
 
              <Universe/>

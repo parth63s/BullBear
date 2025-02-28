@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-function NavBar() {
+function NavBar({index = -1}) {
+  const [link, setLink] = useState(index);
+
+  const handleLinkClink = (index) => {
+    setLink(index);
+  }
+
+  const activeLinkClass = "link activeLink";
   return (
     <nav
       className="navbar navbar-expand-lg border-bottom"
@@ -30,28 +37,28 @@ function NavBar() {
           <form className="d-flex" role="search">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/signup">
-                  SignUp
+                <Link className="nav-link active" aria-current="page" to="/about" onClick={() => handleLinkClink(0)}>
+                  <p className={link == 0 ? activeLinkClass : ""}>About</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/about">
-                  About
+                <Link className="nav-link active" aria-current="page" to="/product"  onClick={() => handleLinkClink(1)}>
+                  <p className={link == 1 ? activeLinkClass : ""}>Product</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/product">
-                  Product
+                <Link className="nav-link active" aria-current="page" to="/pricing"  onClick={() => handleLinkClink(2)}>
+                  <p className={link == 2 ? activeLinkClass : ""}>Pricing</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/pricing">
-                  Pricing
+                <Link className="nav-link active" aria-current="page" to="/support"  onClick={() => handleLinkClink(3)}>
+                  <p className={link == 3 ? activeLinkClass : ""}>Support</p>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/support">
-                  Support
+                <Link className="nav-link active" aria-current="page" to="/signup"  onClick={() => handleLinkClink(4)}>
+                  <p className={link == 4 ? activeLinkClass : ""}>SignUp</p>
                 </Link>
               </li>
             </ul>

@@ -6,7 +6,7 @@ function Universe() {
             <div className="container mt-5 ">
 
                 <div className="row text-center">
-                    <h1 className='fs-3'>The Zerodha Universe</h1>
+                    <h1 className='fs-3'>The BullBear Universe</h1>
                     <p>
                         Extend your trading and investment experience even further with our
                         partner platforms
@@ -27,7 +27,7 @@ function Universe() {
                     </div>
 
                     <div className="col-4 p-3 mt-5">
-                        <img src="media/images/zerodhaFundhouse.png" style={{width:"60%"}}/>
+                        <img src="media/images/BullBearFundhouse.png" style={{width:"60%"}}/>
                         <p className='text-small text-muted mt-2'>Asset management</p>
                     </div>
 
